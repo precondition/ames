@@ -3,7 +3,7 @@
 get_selection() {
     # get a region of the screen for future screenshotting.
     # fix coordinates scale (for some reason, for me 150% is 1.3333 in slop and 2.0 in slurp)
-    local -r scale="2.0"
+    local -r scale="1.0"
     slurp -f "%w:%h:%x:%y" | perl -pe "s/(\d+)/\$1*$scale/ge"
     # slop -f "%w:%h:%x:%y"  | perl -pe "s/(\d+)/\$1*$scale/ge"
 }
